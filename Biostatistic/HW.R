@@ -96,7 +96,7 @@ yH1r  <- dnorm(right, mu1, sigma)
 
 ###
 curve(dnorm(x, mu0, sigma), xlim=xLims, lwd=2, col="red", xlab="x", ylab="density",
-      main="Normal distribution under H0 and H1", ylim=c(0, 0.3), xaxs="i")
+      cex.lab = 1.5 ,main="Normal distribution under H0 and H1", ylim=c(0, 0.3), xaxs="i")
 curve(dnorm(x, mu1, sigma), lwd=2, col="blue", add=TRUE)
 polygon(c(right, rev(right)), c(yH0r, numeric(length(right))), border=NA,
         col=rgb(1, 0.3, 0.3, 0.6))
@@ -107,9 +107,9 @@ polygon(c(right, rev(right)), c(yH1r, numeric(length(right))), border=NA,
 abline(v=crit, lty=1, lwd=3, col="red")
 
 ###
-text(crit+0.1,  0.03,  adj=0, label="¡öcritical value")
-text(mu0+2.5,  0.25, adj=1, label="distribution under H0")
-text(mu1-2,  0.25, adj=0, label="distribution under H1")
+text(crit+0.1,  0.03,  adj=0, cex = 1.5, label="â†critical value")
+text(mu0+2.5,  0.3, adj=1, cex = 1.5, label="distribution under H0")
+text(mu1-2,  0.3, adj=0,cex = 1.5, label="distribution under H1")
 text(crit+2,  0.1,  adj=0, label="power", cex=1.3)
 text(crit-1.2, 0.01,  expression(beta),  cex=1.3)
 text(crit+0.5,  0.01, expression(alpha), cex=1.3)
